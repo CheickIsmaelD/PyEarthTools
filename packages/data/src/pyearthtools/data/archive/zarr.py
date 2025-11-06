@@ -29,11 +29,10 @@ from typing import Any, Literal
 import dask
 import xarray as xr
 
-import pyearthtools.data
+import pyearthtools.data import Petdt, Transform, TransformCollection
 from pyearthtools.data.indexes import DataFileSystemIndex, TimeIndex
 from pyearthtools.data.operations.utils import identify_time_dimension
 from pyearthtools.data.save import save
-from pyearthtools.data.transforms import Transform, TransformCollection
 from pyearthtools.data.utils import parse_path
 
 LOG = logging.getLogger("pyearthtools.data")

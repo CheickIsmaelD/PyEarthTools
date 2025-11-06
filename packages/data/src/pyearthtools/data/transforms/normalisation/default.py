@@ -15,29 +15,24 @@
 
 from __future__ import annotations
 
+import logging
+import tempfile
+import warnings
 from abc import abstractmethod
 from pathlib import Path
 from typing import Callable, Hashable
-import warnings
-import tempfile
-import logging
 
 import xarray as xr
+from pyearthtools.utils.initialisation.imports import dynamic_import
 
 import pyearthtools.data
-
-from pyearthtools.data import Petdt
+from pyearthtools.data.indexes.utilities.fileload import open_files
+from pyearthtools.data.transforms.default import get_default_transforms
 from pyearthtools.data.transforms.normalisation._utils import format_class_name
 from pyearthtools.data.transforms.transform import (
     FunctionTransform,
     Transform,
 )
-
-from pyearthtools.data.transforms.default import get_default_transforms
-
-from pyearthtools.data.indexes.utilities.fileload import open_files
-
-from pyearthtools.utils.initialisation.imports import dynamic_import
 
 LOG = logging.getLogger("pyearthtools.data")
 
@@ -67,8 +62,8 @@ class Normaliser:
     def __init__(
         self,
         index: pyearthtools.data.AdvancedTimeIndex,
-        start: Petdt | Petdt | None = None,
-        end: Petdt | Petdt | None = None,
+        start: pyearthtools.data.Petdt | None = None,
+        end: pyearthtools.data.Petdt | None = None,
         interval: int | tuple | None = None,
         *,
         override: str | Path | dict | None = None,
@@ -197,7 +192,7 @@ class Normaliser:
 
         save_pattern = (
             pyearthtools.data.patterns.ArgumentExpansion(
-                Path(self.cache_dir) / f"{str(save_prefix)+'_' if save_prefix else ''}{method}",
+                Path(self.cache_dir) / f"{str(save_prefix) + '_' if save_prefix else ''}{method}",
                 extension=".nc",
             )
             if self.cache_dir
