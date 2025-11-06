@@ -98,6 +98,7 @@ from pyearthtools.data import (
     utils,
 )
 from pyearthtools.data import transforms as transform
+from pyearthtools.data._time import Petdt, TimeDelta, TimeRange, TimeResolution
 from pyearthtools.data.archive.utils import auto_import
 from pyearthtools.data.collection import Collection, LabelledCollection
 from pyearthtools.data.exceptions import DataNotFoundError, InvalidIndexError
@@ -124,8 +125,6 @@ from pyearthtools.data.indexes import (
 from pyearthtools.data.load import load
 from pyearthtools.data.patterns import PatternIndex
 from pyearthtools.data.save import ManageFiles, ManageTemp
-from pyearthtools.data.time import Petdt, TimeDelta, TimeRange, TimeResolution
-from pyearthtools.data.time import Petdt as datetime
 from pyearthtools.data.transforms.derive import evaluate
 from pyearthtools.data.transforms.transform import (
     FunctionTransform,

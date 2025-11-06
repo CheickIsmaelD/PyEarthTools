@@ -324,13 +324,13 @@ class DataIndex(Index):
 
 class SingleTimeIndex(Index):
     """
-    Introduce single time based Indexing with [Petdt][pyearthtools.data.time.Petdt].
+    Introduce single time based Indexing with [Petdt][pyearthtools.data.Petdt].
 
     While [Index][pyearthtools.data.indexes.indexes.Index] assumes nothing about the selection arguments,
-    this will attempt to convert them to a [Petdt][pyearthtools.data.time.Petdt], and select that time
+    this will attempt to convert them to a [Petdt][pyearthtools.data.Petdt], and select that time
     from the data.
 
-    [Petdt][pyearthtools.data.time.Petdt] keeps a record of the resolution of the given date string,
+    [Petdt][pyearthtools.data.Petdt] keeps a record of the resolution of the given date string,
     which allows for more informative warnings.
 
     """
@@ -348,7 +348,7 @@ class SingleTimeIndex(Index):
 
         Args:
             data_interval: Interval of data. Must follow format for
-                [TimeDelta][pyearthtools.data.time.TimeDelta].
+                [TimeDelta][pyearthtools.data.TimeDelta].
 
                 - E.g. \n
                 >>> (1, 'h') = 1 Hour
@@ -405,7 +405,7 @@ class SingleTimeIndex(Index):
         Set interval of data
 
         Args:
-            data_interval: Interval of data. Must follow format for [TimeDelta][pyearthtools.data.time.TimeDelta].
+            data_interval: Interval of data. Must follow format for [TimeDelta][pyearthtools.data.TimeDelta].
 
                 - E.g. \n
                   >>> (1, 'h') = 1 Hour
@@ -490,7 +490,7 @@ class SingleTimeIndex(Index):
 
 class TimeIndex(SingleTimeIndex):
     """
-    Introduce general time based Indexing with [Petdt][pyearthtools.data.time.Petdt].
+    Introduce general time based Indexing with [Petdt][pyearthtools.data.Petdt].
 
     Allow for multiple time retrievals.
     """
@@ -944,7 +944,7 @@ class ArchiveIndex(AdvancedTimeDataIndex, FileSystemIndex):
     @functools.wraps(FileSystemIndex.search)
     def search(self, *args):
         """
-        Attempt to convert first arg to a [Petdt][pyearthtools.data.time.Petdt],
+        Attempt to convert first arg to a [Petdt][pyearthtools.data.Petdt],
         if conversion fails, ignore and continue
 
         Will operate with time resolution behaviour from `AdvancedTimeIndex`.
@@ -1014,7 +1014,7 @@ class ForecastIndex(TimeIndex, DataFileSystemIndex):
     @functools.wraps(FileSystemIndex.search)
     def search(self, *args) -> Path:
         """
-        Attempt to convert first arg to a [Petdt][pyearthtools.data.time.Petdt],
+        Attempt to convert first arg to a [Petdt][pyearthtools.data.Petdt],
         if conversion fails, ignore and continue
         """
         args = list(args)

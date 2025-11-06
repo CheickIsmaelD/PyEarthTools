@@ -182,9 +182,9 @@ The rest of this page contains reference information for the components of the D
 |                  |                                               | - [time_delta_resolution](data_api.md#pyearthtools.data.time.time_delta_resolution) |
 |                  |                                               | - [range_samples](data_api.md#pyearthtools.data.time.range_samples) |
 |                  |                                               | - [TimeResolution](data_api.md#pyearthtools.data.time.TimeResolution) |
-|                  |                                               | - [Petdt](data_api.md#pyearthtools.data.time.Petdt) |
-|                  |                                               | - [TimeDelta](data_api.md#pyearthtools.data.time.TimeDelta) |
-|                  |                                               | - [TimeRange](data_api.md#pyearthtools.data.time.TimeRange) |
+|                  |                                               | - [Petdt](data_api.md#pyearthtools.data.Petdt) |
+|                  |                                               | - [TimeDelta](data_api.md#pyearthtools.data.TimeDelta) |
+|                  |                                               | - [TimeRange](data_api.md#pyearthtools.data.TimeRange) |
 | `data.warnings`  |                                               | - [pyearthtoolsDataWarning](data_api.md#pyearthtools.data.warnings.InvalidIndexError) |
 |                  |                                               | - [IndexWarning](data_api.md#pyearthtools.data.warnings.IndexWarning) |
 |                  |                                               | - [AccessorRegistrationWarning](data_api.md#pyearthtools.data.warnings.AccessorRegistrationWarning) |

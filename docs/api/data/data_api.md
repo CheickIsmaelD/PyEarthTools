@@ -443,9 +443,9 @@
 .. autofunction:: pyearthtools.data.time.time_delta_resolution
 .. autofunction:: pyearthtools.data.time.range_samples
 
-.. autoclass:: pyearthtools.data.time.Petdt
+.. autoclass:: pyearthtools.data.Petdt
     :members:
-.. autoclass:: pyearthtools.data.time.TimeDelta
+.. autoclass:: pyearthtools.data.TimeDelta
     :members:
 .. autoclass:: pyearthtools.data.time.TimeRange
     :members:
